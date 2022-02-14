@@ -8,6 +8,25 @@
     <title>New Ninjas</title>
 </head>
 <body>
-    
+    <h1>New Ninja</h1>
+    <div class="container">
+        <form action="/create_ninja" method="POST">
+            <label for="dojos">Dojo:</label>
+           <select name="dojo_id" id="dojos">
+                {% for dojo in all_dojos %},
+                <option value="{{dojo.id}}">{{dojo.name}}</option>
+                {% endfor %}
+            </select>
+            <label for="first_name">First name:</label>
+            <input type="text" id="first_name" name="first_name" value="">
+            <label for="last_name">Last name:</label>
+            <input type="text" id="last_name" name="last_name" value="">
+            <input type="submit" value="Create">
+        </form>
+        <div class="container">
+            <a href="/">Home</a>
+        </div>
+
+    </div>
 </body>
 </html>

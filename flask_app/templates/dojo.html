@@ -23,19 +23,15 @@
             <!-- Display all the Dojo's  -->
             <div class="container">
                 <h1>All Dojo's</h1>
-            {% for dojos in all_dojos %}
-               <p>{{dojos['name']}}</p>
-               
+            {% for dojo in all_dojos %}
+            <a href="/show/dojo/{{dojo.id}}">{{dojo.name}}</a>
             {% endfor %}
-            
-            
-               
+        
 
-            
-    
 
+            <div class="container">
+                <a href="/ninjas">Add Ninja</a>
             </div>
-
 
         </form>
     </div>
